@@ -1,0 +1,93 @@
+   :root {
+      --color-principal: #5eaecb;
+      --color-secundario: #4a99b0;
+      --color-fondo: #edf6fa;
+      --color-texto: #184b63;
+    }
+    body {
+      background-color: var(--color-fondo);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--color-texto);
+    }
+    .barra-superior {
+      background-color: var(--color-secundario);
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .menu-navegacion {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .menu-navegacion a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .menu-navegacion a:hover {
+      text-decoration: underline;
+    }
+    .contenido-carrito {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 40px 20px;
+    }
+    .productos-carrito {
+      flex: 2;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .producto-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .producto-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .resumen-pedido {
+      flex: 1;
+      background-color: var(--color-principal);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      height: fit-content;
+    }
+    .resumen-pedido h4 {
+      margin-bottom: 20px;
+    }
+    .resumen-pedido .linea-resumen {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .resumen-pedido select,
+    .resumen-pedido button {
+      width: 100%;
+      margin-top: 10px;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .resumen-pedido button {
+      background-color: var(--color-secundario);
+      color: white;
+    }
+    .pie-pagina {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }

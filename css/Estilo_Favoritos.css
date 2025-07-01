@@ -1,0 +1,80 @@
+:root {
+      --color-principal: #5eaecb;
+      --color-secundario: #4a99b0;
+      --color-fondo: #edf6fa;
+      --color-texto: #184b63;
+    }
+    body {
+      background-color: var(--color-fondo);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--color-texto);
+    }
+    .barra-superior {
+      background-color: var(--color-secundario);
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .menu-navegacion {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .menu-navegacion a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .menu-navegacion a:hover {
+      text-decoration: underline;
+    }
+    .seccion-favoritos {
+      padding: 50px 20px;
+    }
+    .seccion-favoritos h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: var(--color-texto);
+    }
+    .lista-favoritos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .item-favorito {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .item-favorito img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .info-producto {
+      flex: 1;
+    }
+    .info-producto h5 {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .info-producto p {
+      margin: 0;
+      color: #555;
+    }
+    .pie-pagina {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
