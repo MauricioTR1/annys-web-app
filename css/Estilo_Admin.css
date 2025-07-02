@@ -1,8 +1,7 @@
-/* Import Google Fonts (optional, choose your own fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #007bff; /* Un azul común, puedes ajustarlo */
+    --primary-color: #007bff;
     --secondary-color: #6c757d;
     --success-color: #28a745;
     --danger-color: #dc3545;
@@ -12,7 +11,7 @@
     --sidebar-bg: #2b3035; /* Color de fondo oscuro para el sidebar */
     --sidebar-text: #adb5bd; /* Color de texto claro para el sidebar */
     --sidebar-active-bg: #007bff; /* Color de fondo para el elemento activo del sidebar */
-    --sidebar-active-text: #fff; /* Color de texto para el elemento activo del sidebar */
+    --sidebar-active-text: #fff; 
 
     --header-bg: #ffffff;
     --body-bg: #f8f9fa; /* Color de fondo general del cuerpo */
@@ -424,7 +423,7 @@ ul {
 
     .main-content {
         margin-left: 0;
-        padding-top: 10px; /* Pequeño padding si el sidebar ya no está fijo */
+        padding-top: 10px;
     }
 
     .header {
@@ -452,7 +451,7 @@ ul {
 
     .dashboard-cards,
     .reports-section {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
     }
 }
 
