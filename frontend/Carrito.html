@@ -10,12 +10,28 @@
 <body>
   <!-- Menú de navegación -->
   <header class="barra-superior">
-    <div class="logo">
-      <a href="#"><img src="img/AnnysLogo.png" alt="Logo Annys"></a>
+    <div class="contenido-barra">
+      <div class="logo">
+        <a href="#">
+          <img src="/img/AnnysLogo.png" alt="Logo Annys">
+        </a>
+      </div>
+      <nav class="menu-navegacion">
+        <a href="Inicio.html">Inicio</a>
+        <a href="Registro.html">Registrarse</a>
+        <div class="dropdown-categorias">
+          <a href="#">Categorías</a>
+          <ul class="lista-categorias">
+            <li>Útiles escolares</li>
+            <li>Papelería básica</li>
+            <li>Arte y dibujo</li>
+            <li>Oficina</li>
+          </ul>
+        </div>
+        <a href="Favoritos.html">Favoritos</a>
+        <a href="Carrito.html">Carrito</a>
+      </nav>
     </div>
-    <nav class="menu-navegacion">
-      <a href="Inicio.html">Inicio</a>
-    </nav>
   </header>
 
   <!-- Contenido del carrito -->
@@ -24,7 +40,7 @@
     <section class="productos-carrito">
       <h3>Mi Carrito</h3>
       <div class="producto-item">
-        <img src="pendiente.jpg" alt="Aqui va una imagen c:">
+        <img src="/img/lapizPremium.png" alt="Aqui va una imagen c:">
         <div>
           <h5>Lápices Premium</h5>
           <p>Calidad profesional para escribir y dibujar con precisión.</p>
@@ -32,7 +48,7 @@
         </div>
       </div>
       <div class="producto-item">
-        <img src="pendiente.jpg" alt="Aqui va una imagen c:">
+        <img src="/img/cuaderno.png" alt="Aqui va una imagen c:">
         <div>
           <h5>Cuaderno de Diseño</h5>
           <p>Diseño moderno y resistente, ideal para la escuela o la oficina.</p>
@@ -66,6 +82,7 @@
       <button>Finalizar Compra</button>
     </aside>
   </main>
+  <br><br><br><br>
 
   <!-- Pie de página -->
   <footer class="pie-pagina">
