@@ -33,8 +33,10 @@
     </div>
   </header>
   <div class="contenedor-registro">
-    <h2>Iniciar Sesión</h2>
-    <form action="#" method="POST">
+    <h2>Regístrate para comprar</h2>
+
+
+    <form id="registrar-usuario" action="#Inicio.html" method="POST">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre de pila</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -51,13 +53,58 @@
         <label for="contrasena" class="form-label">Contraseña</label>
         <input type="password" class="form-control" id="contrasena" name="contrasena" required>
       </div>
-      <button type="submit" class="btn btn-primary boton-enviar">Iniciar</button>
+      <button type="submit" id="registrarse-btn" class="btn btn-primary boton-enviar">Registrarse</button>
     </form>
+
+
   </div>
 
   <footer class="pie-pagina">
     <p>&copy; 2025 Papelería Web Annys. Todos los derechos reservados.</p>
   </footer>
+  <script>
+    const apiUrl = "http://localhost:8080/usuarios";
+    const form = document.getElementById("registrar-usuario");
+    const submitBtn = document.getElementById("registrarse-btn");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      submitBtn.disabled=true;
+      let nombre_de_usuario = document.getElementById("nombre").value.trim()+ " " + document.getElementById("apellidos").value.trim();
+      console.log(nombre_de_usuario);
+      const usuario = {
+        nombre_usuario: nombre_de_usuario,
+        correo_usuario: document.getElementById("correo").value.trim(),
+        contrasenia_usuario: document.getElementById("contrasena").value.trim(),
+      }
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(usuario)
+        });
+        if (response.ok) {
+          alert("Registro exitoso");
+          form.reset();
+        } else {
+          console.log(JSON.stringify(usuario))
+          let errorMessage = response.statusText;
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+          } catch {
+
+          }
+          alert("Error al guardar " + errorMessage)
+        }
+      } catch (error) {
+        console.error("Error en la conexión ", error);
+        alert("Error en la conexión al servidor")
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 
 </body>
 </html>
