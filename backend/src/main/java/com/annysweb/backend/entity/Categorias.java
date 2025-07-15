@@ -23,7 +23,7 @@ public class Categorias {
     @Column(name = "nombre_categoria", nullable = false, length = 25)
     private String nombre_categoria;
 
-    @Size(max = 30, message = "La descripción de la categoría no debe exceder los 30 caracteres")
-    @Column(name = "descripcion_categoria", length = 30)
+    @Size(max = 200, message = "La descripción de la categoría no debe exceder los 30 caracteres")
+    @Column(name = "descripcion_categoria", length = 200)
     private String descripcion_categoria;
 }

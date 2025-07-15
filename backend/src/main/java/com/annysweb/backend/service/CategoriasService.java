@@ -12,11 +12,19 @@ import java.util.Optional;
 public class CategoriasService {
     @Autowired
     CategoriasRepository categoriasRepository;
-    public List<Categorias> getCategorias() { return categoriasRepository.findAll(); }
+    public List<Categorias> getCategorias() {
+        return categoriasRepository.findAll();
+    }
 
-    public Optional<Categorias> getCategorias(Integer id_categoria) { return categoriasRepository.findById(id_categoria); }
+    public Optional<Categorias> getCategoria(Integer id_categoria) {
+        return categoriasRepository.findById(id_categoria);
+    }
 
-    public void saveOrUpdate(Categorias categorias) { categoriasRepository.save(categorias); }
+    public void saveOrUpdate(Categorias categorias) {
+        categoriasRepository.save(categorias);
+    }
 
-    public void delete(Integer id_categoria) { categoriasRepository.deleteById(id_categoria); }
+    public void delete(Integer id_categoria) {
+        categoriasRepository.deleteById(id_categoria);
+    }
 }

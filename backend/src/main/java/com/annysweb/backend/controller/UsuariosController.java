@@ -20,11 +20,11 @@ public class UsuariosController {
         return usuariosService.getUsuario(id);
     }
     @PostMapping
-    public void SaveUpdate(@RequestBody Usuarios usuario){
+    public void saveUpdate(@RequestBody Usuarios usuario){
         usuariosService.saveOrUpdate(usuario);
     }
     @DeleteMapping("/{id_usuarios}")
-    public void SaveDelete(@PathVariable("id_usuarios") Integer id){
+    public void saveDelete(@PathVariable("id_usuarios") Integer id){
         usuariosService.delete(id);
     }
 }
