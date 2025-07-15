@@ -14,24 +14,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Usuarios {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY) // las llaves son autogeneradas en mysql, por eso identity
-    @Column(name="id_usuarios", unique=true, nullable=false)
-    private Integer id_usuario;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id_usuarios")
+    private Long idUsuarios;
 
     @NotBlank(message="Nombre de usuario obligatorio")
-    @Size(max=100, message="El nombre de usuario no debe exceder 25 caracteres")
+    @Size(max=100, message="El nombre de usuario no debe exceder 100 caracteres")
     @Column(name="nombre_usuario", nullable = false, length = 100)
-    private String nombre_usuario;
+    private String nombreUsuario;
 
     @NotBlank(message="Correo de usuario obligatorio")
     @Size(max=100, message = "El correo no debe exceder 100 caracteres")
-    @Column(name="correo_usuario", nullable = false, length = 100)
-    private String correo_usuario;
+    @Column(name="correo_usuario", nullable = false, length = 100, unique = true)
+    private String correoUsuario;
 
-    // por ahorita solamente se guardan las contraseñas como texto plano
-    // lo ideal sería encriptar las contraseñas xd
     @NotBlank(message="La contraseña del usuario es obligatorio")
     @Size(max=100, message = "La contraseña no debe exceder 100 caracteres")
     @Column(name="contrasenia_usuario", nullable = false, length = 100)
-    private String contrasenia_usuario;
+    private String contraseniaUsuario;
 }
