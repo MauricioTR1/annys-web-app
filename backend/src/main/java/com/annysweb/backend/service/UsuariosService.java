@@ -16,13 +16,13 @@ public class UsuariosService {
     private final UsuariosRepository usuariosRepository;
     private final PasswordEncoder passwordEncoder; // Inyectar PasswordEncoder
 
-    @Autowired // Inyección de dependencias por constructor (recomendado)
+    @Autowired
     public UsuariosService(UsuariosRepository usuariosRepository, PasswordEncoder passwordEncoder) {
         this.usuariosRepository = usuariosRepository;
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Transactional(readOnly = true) // Marcar como solo lectura para optimización
+    @Transactional(readOnly = true)
     public List<Usuarios> getUsuarios() {
         return usuariosRepository.findAll();
     }
@@ -33,13 +33,13 @@ public class UsuariosService {
     }
 
     @Transactional(readOnly = true)
-    // Método para buscar un usuario por su correo electrónico (necesario para el login y registro)
+    // Método para buscar un usuario por su correo electrónico
     public Optional<Usuarios> findByCorreoUsuario(String correo) {
         return usuariosRepository.findByCorreoUsuario(correo);
     }
 
     @Transactional(readOnly = true)
-    // Método para buscar un usuario por su nombre de usuario (necesario para el registro)
+    // Método para buscar un usuario por su nombre de usuario
     public Optional<Usuarios> findByNombreUsuario(String nombreUsuario) {
         return usuariosRepository.findByNombreUsuario(nombreUsuario);
     }
@@ -48,7 +48,7 @@ public class UsuariosService {
     public Usuarios saveOrUpdate(Usuarios usuario) {
         // Hashea la contraseña antes de guardar o actualizar
         usuario.setContraseniaUsuario(passwordEncoder.encode(usuario.getContraseniaUsuario()));
-        return usuariosRepository.save(usuario); // Retorna el usuario guardado
+        return usuariosRepository.save(usuario);
     }
 
     @Transactional // Marcar como transaccional para operaciones de escritura
