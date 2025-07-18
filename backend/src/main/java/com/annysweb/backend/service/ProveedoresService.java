@@ -35,6 +35,7 @@ public class ProveedoresService {
 
     @Transactional
     public Proveedores saveProveedor(Proveedores proveedor) {
+        System.out.println("Recibiendo proveedor en saveProveedor: " + proveedor);
         return proveedoresRepository.save(proveedor);
     }
 
