@@ -488,3 +488,84 @@ ul {
     }
 }
   
+/*CAMBIOS*/
+ .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .form-grid textarea {
+      grid-column: span 2;
+      resize: vertical;
+      height: 100px;
+    }
+
+    .form-grid button {
+      grid-column: span 2;
+      justify-self: center;
+      padding: 10px 30px;
+      font-size: 16px;
+    }
+
+    .table-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .table-section th, .table-section td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #5C6BC0;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3f51b5;
+    }
+
+    .btn-edit {
+      background-color: #29b6f6;
+    }
+
+    .btn-edit:hover {
+      background-color: #039be5;
+    }
+
+    .btn-delete {
+      background-color: #ef5350;
+    }
+
+    .btn-delete:hover {
+      background-color: #d32f2f;
+    }
+
+    .history-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .history-section .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .form-section, .table-section, .history-section {
+      margin-bottom: 40px;
+    }
+
+    h2 i {
+      margin-right: 8px;
+    }
