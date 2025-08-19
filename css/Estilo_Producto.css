@@ -1,0 +1,99 @@
+ :root {
+      --color-principal: #5eaecb;
+      --color-secundario: #4a99b0;
+      --color-fondo: #edf6fa;
+      --color-texto: #184b63;
+    }
+    body {
+      background-color: var(--color-fondo);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--color-texto);
+    }
+    .barra-superior {
+      background-color: var(--color-secundario);
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .menu-navegacion {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .menu-navegacion a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .menu-navegacion a:hover {
+      text-decoration: underline;
+    }
+    .pagina-producto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 50px 20px;
+    }
+    .imagen-producto {
+      flex: 1;
+    }
+    .imagen-producto img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .detalles-producto {
+      flex: 2;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .detalles-producto h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .detalles-producto p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .control-cantidad {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .control-cantidad button {
+      padding: 5px 15px;
+      font-size: 18px;
+      background-color: var(--color-principal);
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .control-cantidad input {
+      width: 60px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .boton-carrito {
+      background-color: var(--color-secundario);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .pie-pagina {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }

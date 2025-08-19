@@ -1,0 +1,118 @@
+:root {
+      --color-principal: #5eaecb;
+      --color-secundario: #4a99b0;
+      --color-fondo: #edf6fa;
+      --color-texto: #184b63;
+    }
+    body {
+      background-color: var(--color-fondo);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--color-texto);
+    }
+    .barra-superior {
+      background-color: var(--color-secundario);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 0;
+    }
+    .contenido-barra {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 10px 30px;
+      flex-wrap: wrap;
+    }
+    .logo img {
+      height: 55px;
+    }
+    .menu-navegacion {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .menu-navegacion a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .menu-navegacion a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .dropdown-categorias {
+      position: relative;
+    }
+    .lista-categorias {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-principal);
+      border-radius: 0 0 8px 8px;
+      padding: 10px;
+      list-style: none;
+      margin: 0;
+      z-index: 10;
+    }
+    .lista-categorias li {
+      padding: 5px 10px;
+      color: white;
+    }
+    .lista-categorias li:hover {
+      background-color: var(--color-secundario);
+      cursor: pointer;
+    }
+    .dropdown-categorias:hover .lista-categorias {
+      display: block;
+    }
+    .seccion-favoritos {
+      padding: 50px 20px;
+    }
+    .seccion-favoritos h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: var(--color-texto);
+    }
+    .lista-favoritos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .item-favorito {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .item-favorito img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .info-producto {
+      flex: 1;
+    }
+    .info-producto h5 {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .info-producto p {
+      margin: 0;
+      color: #555;
+    }
+    .pie-pagina {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
